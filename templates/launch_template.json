@@ -1,0 +1,34 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+
+        {
+            "name": "Debug (Usando Herramientas ST)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/project/build_mcu/firmware_stm32f103c8t6/firmware_stm32f103c8t6.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            
+            // 1. Usamos el servidor oficial de ST
+            "servertype": "stlink",
+            "device": "STM32F103C8",
+            "interface": "swd",
+
+            // 2. BUSCAMOS EL SERVIDOR DENTRO DE CUBE IDE (Ajusta tu versión)
+            // Busca este archivo ST-LINK_gdbserver.exe en tu disco   y pega la ruta:
+            "serverpath": "C:/ST/STM32CubeIDE_2.0.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.stlink-gdb-server.win32_2.2.300.202509021040/tools/bin/ST-LINK_gdbserver.exe",
+
+            // 3. BUSCAMOS EL GDB DENTRO DE CUBE IDE
+            // Busca STM32_Programmer_CLI.exe en tu discoy pega la ruta:
+            "armToolchainPath": "C:/ST/STM32CubeIDE_2.0.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin",
+            "showDevDebugOutput": "none",
+            
+
+            "overrideLaunchCommands": [
+                "-gdb-set substitute-path /home/project C:/your/path/here/project/project"
+                ]
+            
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+# Forzar finales de línea LF (Linux) para scripts y código
+*.c     text eol=lf
+*.h     text eol=lf
+*.cpp   text eol=lf
+*.hpp   text eol=lf
+*.sh    text eol=lf
+*.bash  text eol=lf
+*.txt   text eol=lf
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf
+Dockerfile text eol=lf
+
+# Forzar windows para .bat)
+*.bat   text eol=crlf

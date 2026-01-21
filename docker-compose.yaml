@@ -1,0 +1,14 @@
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: Docker/debian.Dockerfile
+    
+    image: stm32-toolchain:latest 
+    volumes:
+      - ./project:/home/project
+    # security_opt:
+    #   - seccomp:unconfined
+    command: /bin/bash
+    working_dir: /home/project
+    tty: true

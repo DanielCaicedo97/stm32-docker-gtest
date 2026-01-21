@@ -1,0 +1,45 @@
+# --- Build & Output Directories ---
+# Ignora cualquier carpeta que empiece por "build" (ej: build/, build_tests/, build_mcu/)
+build*/
+Build*/
+bin/
+obj/
+_deps/
+
+# --- CMake & Ninja specific ---
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+*.ninja
+.ninja_*
+CMakeUserPresets.json
+
+# --- STM32 & Compiler Artifacts ---
+*.elf
+*.hex
+*.bin
+*.map
+*.su
+*.lst
+
+# --- IDEs & Metadata ---
+.settings/
+.metadata/
+.cproject
+.project
+.launch
+.mxproject
+.session
+.vscode/
+.idea/
+
+# --- Temp files ---
+*.bak
+*~
